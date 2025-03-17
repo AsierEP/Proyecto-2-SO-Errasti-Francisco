@@ -351,6 +351,7 @@ public class Simulacion extends javax.swing.JFrame {
 
         BGPanel.setBackground(new java.awt.Color(2, 2, 130));
 
+        Tree.setBackground(new java.awt.Color(255, 166, 132));
         jScrollPane1.setViewportView(Tree);
 
         Table.setBackground(new java.awt.Color(204, 204, 255));
