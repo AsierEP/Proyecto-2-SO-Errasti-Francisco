@@ -6,7 +6,7 @@ package EDD;
 
 /**
  *
- * @author Dell
+ * @author Dell hola nelly
  */
 public class List<T> {
     private Node<T> pfirst;
