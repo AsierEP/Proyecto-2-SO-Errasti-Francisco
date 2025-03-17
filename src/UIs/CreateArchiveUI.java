@@ -76,6 +76,8 @@ public class CreateArchiveUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+
         TitleLab.setFont(new java.awt.Font("Castellar", 1, 18)); // NOI18N
         TitleLab.setText("Crear un archivo");
 
@@ -93,6 +95,8 @@ public class CreateArchiveUI extends javax.swing.JFrame {
 
         Lab4.setText("Directorio del archivo:");
 
+        BackButt.setBackground(new java.awt.Color(255, 51, 51));
+        BackButt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BackButt.setText("Volver");
         BackButt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +104,8 @@ public class CreateArchiveUI extends javax.swing.JFrame {
             }
         });
 
+        CreateButt.setBackground(new java.awt.Color(102, 255, 102));
+        CreateButt.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         CreateButt.setText("Crear archivo");
         CreateButt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +143,7 @@ public class CreateArchiveUI extends javax.swing.JFrame {
                                     .addComponent(DirCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(BackButt)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
                                 .addComponent(CreateButt)))))
                 .addGap(38, 38, 38))
         );
