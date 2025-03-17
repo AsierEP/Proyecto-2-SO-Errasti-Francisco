@@ -100,6 +100,7 @@ public class CreateArchiveUI extends javax.swing.JFrame {
             }
         });
 
+        CreateButt.setBackground(new java.awt.Color(102, 255, 102));
         CreateButt.setText("Crear archivo");
         CreateButt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
