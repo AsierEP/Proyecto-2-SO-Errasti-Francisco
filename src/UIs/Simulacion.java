@@ -163,23 +163,23 @@ public final class Simulacion extends javax.swing.JFrame {
         }
     }
     
-    public void eliminarDirectorio(String nombre,String padre){
-        
-         eliminarNodoDelArbol(padre, nombre);
-        if(!archivos.IsEmpty()){
-            Node actual = archivos.getPfirst();
-            while(actual!=null){
-                Archivo este = (Archivo)actual.getDato();
-                String directorio = este.getDirectorio();
-                Directorio esperado = this.directorios.encontrarDirectorio(nombre,padre);
-                if(nombre.equals(este.getDirectorio())&&padre.equals(esperado.getPadre())){
-                    this.eliminarArchivo(este.getNombre(), directorio);
-                }
-                actual=actual.getPnext();
+public void eliminarDirectorio(String nombre, String padre) {
+    eliminarNodoDelArbol(padre, nombre);
+    if (!archivos.IsEmpty()) {
+        Node actual = archivos.getPfirst();
+        while (actual != null) {
+            Archivo este = (Archivo) actual.getDato();
+            String directorio = este.getDirectorio();
+            Directorio esperado = this.directorios.encontrarDirectorio(nombre, padre);
+            Node siguiente = actual.getPnext();
+            if (nombre.equals(este.getDirectorio()) && padre.equals(esperado.getPadre())) {
+                this.eliminarArchivo(este.getNombre(), directorio);
             }
+            actual = siguiente;
         }
-        this.directorios.eliminarDirectorioDeLista(nombre, padre);
     }
+    this.directorios.eliminarDirectorioDeLista(nombre, padre);
+}
     
    public boolean anadirArchivoJTree(String nombrePadre, String nombreArchivo, int fileSize) {
         
@@ -2218,7 +2218,7 @@ public final class Simulacion extends javax.swing.JFrame {
                     .addGroup(BGPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(BGPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(BGPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(BGPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2299,7 +2299,7 @@ public final class Simulacion extends javax.swing.JFrame {
                                             .addComponent(Panel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(Panel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(Panel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 19, Short.MAX_VALUE))
+                .addGap(0, 13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -2329,11 +2329,19 @@ public final class Simulacion extends javax.swing.JFrame {
             this.setMode("Usuario");
             this.CrearDirButt.setVisible(false);
             this.CrearArchivoButt.setVisible(false);
+            this.ActDirButt.setVisible(false);
+            this.ActArchivoButt.setVisible(false);
+            this.BorrarDirButt.setVisible(false);
+            this.BorrarArchivoButt.setVisible(false);
             this.ModoLab.setText("Actual: Usuario");
         }else{
             this.setMode("Administrador");
             this.CrearDirButt.setVisible(true);
             this.CrearArchivoButt.setVisible(true);
+            this.ActDirButt.setVisible(true);
+            this.ActArchivoButt.setVisible(true);
+            this.BorrarDirButt.setVisible(true);
+            this.BorrarArchivoButt.setVisible(true);
             this.ModoLab.setText("Actual: Administrador");
         }
     }//GEN-LAST:event_ChangeModeButtActionPerformed

@@ -1,0 +1,46 @@
+{
+  "archivos": {
+    "pfirst": {
+      "dato": {
+        "nombre": "deded",
+        "tamaño": 30,
+        "direccionPrimerBloque": 1,
+        "colorRGB": -3916178,
+        "directorio": "FileSystem",
+        "r": 196,
+        "g": 62,
+        "b": 110
+      }
+    },
+    "plast": {
+      "dato": {
+        "nombre": "deded",
+        "tamaño": 30,
+        "direccionPrimerBloque": 1,
+        "colorRGB": -3916178,
+        "directorio": "FileSystem",
+        "r": 196,
+        "g": 62,
+        "b": 110
+      }
+    }
+  },
+  "directorios": {
+    "pfirst": {
+      "dato": {
+        "padre": "FileSystem",
+        "nombre": "FileSystem",
+        "archivos": {},
+        "subdirectorios": {}
+      }
+    },
+    "plast": {
+      "dato": {
+        "padre": "FileSystem",
+        "nombre": "FileSystem",
+        "archivos": {},
+        "subdirectorios": {}
+      }
+    }
+  }
+}
